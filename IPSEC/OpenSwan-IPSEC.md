@@ -7,7 +7,7 @@
 | Singapore | Singa    | 30.100.0.0/16 |       |       |      |      |
 
 
-*Create Seoul VPC 10.0.0.0/16*
+**Create Seoul VPC 10.0.0.0/16**  
 <kbd> ![GitHub Logo](oracle-to-s3-datalake-images/1.png) </kbd>
 
 
