@@ -13,7 +13,9 @@
 **Create EC2 Instance on Seoul VPC, One in Public, Another one in Private**  
 
 ***OpenSwan EC2 in Public Subnet*** 
-Security Group
+
+Security Group - Seoul-OpenSwan
+
 | Protocol | Source-Name |
 | -------- | ----------- |
 | SSH      | 0.0.0.0/0   |
