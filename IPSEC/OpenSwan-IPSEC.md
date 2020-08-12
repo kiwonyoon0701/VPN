@@ -10,6 +10,9 @@
 **Create Seoul VPC 10.0.0.0/16**  
 <kbd> ![GitHub Logo](oracle-to-s3-datalake-images/1.png) </kbd>
 
+**Create EC2 Instance on Seoul VPC, One in Public, Another one in Private**  
+
+***adf***
 
 
 **
