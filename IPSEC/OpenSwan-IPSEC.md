@@ -188,16 +188,15 @@ IPsec running  - pluto pid: 24635
 pluto pid 24635
 1 tunnels up
 some eroutes exist
+
+[ec2-user@ip-10-0-0-112 ~]$ sudo chkconfig ipsec on
 ```
 
 <kbd> ![GitHub Logo](OpenSwan-IPSEC-images/11.png) </kbd>
 
-```
-[ec2-user@ip-10-0-0-112 ~]$ sudo chkconfig ipsec on
-```
 
+## Modifying routing table in Seoul
 
-**Modifying routing table in Seoul**
 *Region : Seoul*
 
 VPC => Route Tables
@@ -219,7 +218,8 @@ Changing public routing table same as private routing table
 <kbd> ![GitHub Logo](OpenSwan-IPSEC-images/15.png) </kbd>
 
 
-**Modifying routing table in Tokyo**
+## Modifying routing table in Tokyo
+
 *Region : Tokyo*
 
 VPC => Route Tables
