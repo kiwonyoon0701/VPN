@@ -9,7 +9,8 @@
 |        |          |             | Public-EC2      | 20.0.0.39  |             |      |
 |        |          |             | Private-EC2     | 20.0.1.166 |             |      |
 
-**Using Amazon Linux 1**
+
+## Using Amazon Linux 1
 
 
 # Create Seoul VPC 10.0.0.0/16 & EC2 Instances
