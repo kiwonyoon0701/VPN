@@ -8,9 +8,9 @@ a VPN Connection. Each VPN Connection is assigned a VPN Connection Identifier
 and is associated with two other identifiers, namely the 
 Customer Gateway Identifier and the Virtual Private Gateway Identifier.
 
-Your VPN Connection ID		         : vpn-0e69d9ffe151c77f1
-Your Virtual Private Gateway ID          : vgw-03cb3677597186021
-Your Customer Gateway ID    		 : cgw-0286131fe859c1af8
+Your VPN Connection ID		         : vpn-
+Your Virtual Private Gateway ID          : vgw-
+Your Customer Gateway ID    		 : cgw-
 		
 A VPN Connection consists of a pair of IPSec tunnel security associations (SAs). 
 It is important that both tunnel security associations be configured. 
@@ -32,7 +32,7 @@ Your customer gateway may reside behind a device performing network address tran
 To ensure that NAT traversal (NAT-T) can function, you must adjust your firewall !rules to unblock UDP port 4500. If not behind NAT, we recommend disabling NAT-T.
   - IKE version              : IKEv1 
   - Authentication Method    : Pre-Shared Key 
-  - Pre-Shared Key           : lWVkkCV.qmaQloTFG3EpIWOPtmMkS_bd
+  - Pre-Shared Key           : 
   - Authentication Algorithm : sha1
   - Encryption Algorithm     : aes-128-cbc
   - Lifetime                 : 28800 seconds
@@ -131,7 +131,7 @@ Your customer gateway may reside behind a device performing network address tran
 To ensure that NAT traversal (NAT-T) can function, you must adjust your firewall !rules to unblock UDP port 4500. If not behind NAT, we recommend disabling NAT-T.
   - IKE version              : IKEv1 
   - Authentication Method    : Pre-Shared Key 
-  - Pre-Shared Key           : o5UQce62AgADW5RcgydOVYj.pkR1dqfF
+  - Pre-Shared Key           : 
   - Authentication Algorithm : sha1
   - Encryption Algorithm     : aes-128-cbc
   - Lifetime                 : 28800 seconds
