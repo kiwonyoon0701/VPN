@@ -102,8 +102,9 @@ conn tunnel_tokyo
 
 <kbd> ![GitHub Logo](OpenSwan-IPSEC-images/2.png) </kbd>
 
+***Launch Public-EC2 in Public Subnet*** 
 
-**Create EC2 instances in Tokyo VPC**
+***Launch Private-EC2 Instance in Private Subnet*** 
 
 *One EC2 instance in Public Subnet*
 
