@@ -10,7 +10,7 @@
 |        |          |             | Private-EC2     | 20.0.1.166 |             | Amazon Linux1 |
 
 
-## Using Amazon Linux 1 - ami-066b76d09a3d3ff4e
+**Using Amazon Linux 1 - ami-066b76d09a3d3ff4e**
 
 
 # Create Seoul VPC 10.0.0.0/16 & EC2 Instances
