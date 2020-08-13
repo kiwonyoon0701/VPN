@@ -15,6 +15,8 @@
 
 ***OpenSwan EC2 in Public Subnet*** 
 
+AMI : AMAZON Linux 1
+
 Security Group - Seoul-OpenSwan
 
 | Protocol | Source-Name |
@@ -92,11 +94,15 @@ conn tunnel_tokyo
 
 ```
 
-**Create Tokyo VPC 20.0.0.0/16**  
+# Create Tokyo VPC 20.0.0.0/16 & EC2 instances
+
 <kbd> ![GitHub Logo](OpenSwan-IPSEC-images/2.png) </kbd>
 
 
 **Create EC2 instances in Tokyo VPC**
+
+One EC2 instance in Public Subnet
+One EC2 instance in Private Subnet
 
 
 **Create VPG(Virtual Private Gateway)**
