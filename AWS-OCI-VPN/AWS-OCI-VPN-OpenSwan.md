@@ -75,18 +75,18 @@ conn tunnel_oci_aws
 <kbd> ![GitHub Logo](AWS-OCI-VPN-OpenSwan-images/4.png) </kbd>
 
 *Create VPN Connection*   
-*IP Address : OCI OpenSwan EC2 EIP : 132.145.95.50*   
+*IP Address : OCI OpenSwan EC2 EIP - 132.145.95.50*   
 *Static Routing : 10.0.0.0/16*
 
 <kbd> ![GitHub Logo](AWS-OCI-VPN-OpenSwan-images/5.png) </kbd>
 
-*Download VPN Configuration*
+## Download VPN Configuration
 
 <kbd> ![GitHub Logo](AWS-OCI-VPN-OpenSwan-images/6.png) </kbd>
 
 <kbd> ![GitHub Logo](AWS-OCI-VPN-OpenSwan-images/7.png) </kbd>
 
-*Check First VPN tunnel IP*
+## Check First VPN tunnel IP
 
 <kbd> ![GitHub Logo](AWS-OCI-VPN-OpenSwan-images/8.png) </kbd>
 
@@ -101,13 +101,14 @@ conn tunnel_oci_aws
      leftid=132.145.95.50            # Openswan인스턴스의 EIP
      leftnexthop=%defaultroute
      leftsubnet=10.0.0.0/16     #VPC CIDR
-     right=52.199.177.210 #추후 VGW Config에서 확인할 Remote Tunnel IP
+     right=52.199.177.210 #VGW Config Tunnel Outside IP Address
      rightsubnet=20.0.0.0/16    #추후 생성할 Remote VPC 1의 CIDR
      pfs=yes
      auto=start
 ```
 
-*Idenfiying Shared key from VPN configuration file*  
+## Idenfiying Shared key from VPN configuration file  
+
 ```
 kiwony@kiwonymac.com:/Users/kiwony/Documents/GitHub/VPN/AWS-OCI-VPN> grep -i pre-share vpn-08d8a884e441e5e96.txt
   - Authentication Method    : Pre-Shared Key
@@ -116,7 +117,7 @@ kiwony@kiwonymac.com:/Users/kiwony/Documents/GitHub/VPN/AWS-OCI-VPN> grep -i pre
   - Pre-Shared Key           : I5VNXqBUWtZWcu8o1I7Zq_oXwSxnqPXX
 ```
 
-*Modifying tunnel.secrets file based on following factors*
+## Modifying tunnel.secrets file based on following factors
 
 ```
 [opc@openswan-oel6 ~]$ sudo cat  /etc/ipsec.d/tunnel.secrets
@@ -137,7 +138,7 @@ IPsec connections: loaded 3, active 1
 
 <kbd> ![GitHub Logo](AWS-OCI-VPN-OpenSwan-images/9.png) </kbd>
 
-**Modifying routing table in AWS**
+## Modifying routing table in AWS
 
 *Region : Tokyo*
 
@@ -147,29 +148,31 @@ Select Tokyo-Private-RT
 
 "Edit routes" Click
 
-Add route entry 10.0.0.0/16(OCI Dest) pointing to VGW
+## Add route entry 10.0.0.0/16(OCI Dest) pointing to VGW
 
 <kbd> ![GitHub Logo](AWS-OCI-VPN-OpenSwan-images/10.png) </kbd>
 
 <kbd> ![GitHub Logo](AWS-OCI-VPN-OpenSwan-images/11.png) </kbd>
 
 
-Changing public routing table same as private routing table
+## Changing public routing table same as private routing table
 
 <kbd> ![GitHub Logo](AWS-OCI-VPN-OpenSwan-images/12.png) </kbd>
 
+## Check Private IP of Tokyo Private EC2 Instance
+
 <kbd> ![GitHub Logo](AWS-OCI-VPN-OpenSwan-images/13.png) </kbd>
 
-*SSH connection check from OCI to AWS, OCI-openswan-oel6(10.0.0.3) => AWS-EC2(20.0.1.166)*
+## SSH connection check from OCI to AWS, OCI-openswan-oel6(10.0.0.3) => AWS-EC2(20.0.1.166)
 
 <kbd> ![GitHub Logo](AWS-OCI-VPN-OpenSwan-images/14.png) </kbd>
 
-*SSH connection test from AWS to OCI, OCI-VPN-Instance(10.0.0.3), OCI-Instance(10.0.0.2)*
+## SSH connection test from AWS to OCI, OCI-VPN-Instance(10.0.0.3), OCI-Instance(10.0.0.2)
 *Fail to connect to 10.0.0.2*
 
 <kbd> ![GitHub Logo](AWS-OCI-VPN-OpenSwan-images/15.png) </kbd>
 
-*Add route tables in OCI, to forward traffic to 10.0.0.3 when its destination is 20.0.0.0/16*
+## Add route tables in OCI, to forward traffic to 10.0.0.3 when its destination is 20.0.0.0/16
 
 <kbd> ![GitHub Logo](AWS-OCI-VPN-OpenSwan-images/16.png) </kbd>
 
@@ -177,29 +180,32 @@ Changing public routing table same as private routing table
 
 <kbd> ![GitHub Logo](AWS-OCI-VPN-OpenSwan-images/18.png) </kbd>
 
-*Now from AWS to OCI connection test is okay*
+## Now from AWS to OCI connection test is okay 
 
 <kbd> ![GitHub Logo](AWS-OCI-VPN-OpenSwan-images/19.png) </kbd>
 
 
+## VPN bandwidth test using iperf
+
+*Listening port 80 in AWS*
+
+```
 [root@ip-20-0-0-39 ~]# yum --enablerepo=epel install iperf iperf3
 
 [root@ip-20-0-0-39 ~]# iperf3 -s -p 80
 -----------------------------------------------------------
 Server listening on 80
 -----------------------------------------------------------
+```
 
+*Start bandwidth Test from OCI*
 
+```
 [root@openswan ~]# yum install iperf iperf3
 [root@openswan ~]# iperf3 -c 20.0.0.39 -t 60 -V -p 80
-
+```
 
 <kbd> ![GitHub Logo](AWS-OCI-VPN-OpenSwan-images/20.png) </kbd>
 
-
 <kbd> ![GitHub Logo](AWS-OCI-VPN-OpenSwan-images/21.png) </kbd>
-
-
-
-
 
