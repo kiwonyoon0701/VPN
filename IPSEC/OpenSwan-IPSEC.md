@@ -1,7 +1,7 @@
 # VPN test on AWS using OpenSwan
 
-| Region | VPC-Name | CIDR        | EC2             | Private IP | Public IP   | etc1 | etc2 |
-| ------ | -------- | ----------- | --------------- | ---------- | ----------- | ---- | ---- |
+| Region | VPC-Name | CIDR        | EC2             | Private IP | Public IP   | etc1 |
+| ------ | -------- | ----------- | --------------- | ---------- | ----------- | ---- |
 | Seoul  | Seoul    | 10.0.0.0/16 |                 |            |             |      |
 |        |          |             | Public-OpenSwan | 10.0.0.112 | 3.34.214.63 |      |
 |        |          |             | Private-EC2     | 10.0.1.210 |             |      |
