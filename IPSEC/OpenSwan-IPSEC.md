@@ -247,8 +247,6 @@ Changing public routing table same as private routing table
 <kbd> ![GitHub Logo](OpenSwan-IPSEC-images/21.png) </kbd>
 
 
-## Ping test from Seoul-private-instance to Tokyo-private-instance
+## Ping test from Tokyo-private-instance to Seoul-private-instance
 
 <kbd> ![GitHub Logo](OpenSwan-IPSEC-images/22.png) </kbd>
-
-<kbd> ![GitHub Logo](OpenSwan-IPSEC-images/23.png) </kb>
