@@ -8,9 +8,9 @@ a VPN Connection. Each VPN Connection is assigned a VPN Connection Identifier
 and is associated with two other identifiers, namely the 
 Customer Gateway Identifier and the Virtual Private Gateway Identifier.
 
-Your VPN Connection ID		         : vpn-08d8a884e441e5e96
-Your Virtual Private Gateway ID          : vgw-05271d186d592299a
-Your Customer Gateway ID    		 : cgw-0e418ab28f36e4464
+Your VPN Connection ID		         : vpn-
+Your Virtual Private Gateway ID          : vgw-
+Your Customer Gateway ID    		 : cgw-
 		
 A VPN Connection consists of a pair of IPSec tunnel security associations (SAs). 
 It is important that both tunnel security associations be configured. 
