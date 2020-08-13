@@ -6,6 +6,8 @@
 | Tokyo     | Tokyo    | 20.0.0.0/16   |       |       |      |      |
 | Singapore | Singa    | 30.100.0.0/16 |       |       |      |      |
 
+**Using Amazon Linux 1**
+
 
 # Create Seoul VPC 10.0.0.0/16 & EC2 Instances
 
@@ -14,8 +16,6 @@
 ## Create EC2 Instance on Seoul VPC, One in Public, Another one in Private
 
 ***OpenSwan EC2 in Public Subnet*** 
-
-AMI : AMAZON Linux 1
 
 Security Group - Seoul-OpenSwan
 
