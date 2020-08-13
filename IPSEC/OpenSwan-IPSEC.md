@@ -50,18 +50,27 @@ kernel.shmmax = 68719476736
 kernel.shmall = 4294967296
 
 [ec2-user@ip-10-0-0-112 ~]$ sudo yum install openswan
+[ec2-user@ip-10-0-0-112 ~]$ sudo cp /etc/ipsec.conf ~/backup
 
 [ec2-user@ip-10-0-0-112 ~]$ sudo vi /etc/ipsec.conf
-[ec2-user@ip-10-0-0-112 ~]$ diff ~/backup/ipsec.conf /etc/ipsec.conf
 [ec2-user@ip-10-0-0-112 ~]$ sudo diff ~/backup/ipsec.conf /etc/ipsec.conf
 23c23
 < #include /etc/ipsec.d/*.conf
 ---
 > include /etc/ipsec.d/*.conf
+```
 
+
+**Get public ip from OpenSwan EC2**
+
+```
 [ec2-user@ip-10-0-0-112 ~]$ curl http://169.254.169.254/latest/meta-data/public-ipv4
 3.34.214.63
+```
 
+**Modify tunnel.conf & Create tunnel.secrets**
+
+```
 [ec2-user@ip-10-0-0-112 ~]$ sudo vi /etc/ipsec.d/tunnel.conf
 [ec2-user@ip-10-0-0-112 ~]$ sudo cat /etc/ipsec.d/tunnel.conf
 conn tunnel_tokyo
