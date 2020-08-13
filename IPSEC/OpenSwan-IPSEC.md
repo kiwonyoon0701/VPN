@@ -121,7 +121,7 @@ Name Tag : ToTokyo
 <kbd> ![GitHub Logo](OpenSwan-IPSEC-images/5.png) </kbd>
 
 
-**Create VPN Connection**
+## Create VPN Connection
 
 VPC => Site-to-Site VPN Connections
 
@@ -141,8 +141,9 @@ Click "Download Configuration" in VPC Connection page
 
 <kbd> ![GitHub Logo](OpenSwan-IPSEC-images/10.png) </kbd>
 
-**Connect to OpenSwan EC2 in seoul**
+## Connect to OpenSwan EC2 in seoul to make VPN connection
 
+```
 kiwony@kiwonymac.com:/Users/kiwony/Documents/GitHub/VPN/IPSEC> grep -i 'virtual private gateway' vpn-0e69d9ffe151c77f1.txt
 Customer Gateway Identifier and the Virtual Private Gateway Identifier.
 Your Virtual Private Gateway ID          : vgw-03cb3677597186021
@@ -191,6 +192,7 @@ some eroutes exist
 <kbd> ![GitHub Logo](OpenSwan-IPSEC-images/11.png) </kbd>
 
 [ec2-user@ip-10-0-0-112 ~]$ sudo chkconfig ipsec on
+```
 
 
 **Modifying routing table in Seoul**
