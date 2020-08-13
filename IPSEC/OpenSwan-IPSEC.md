@@ -19,7 +19,7 @@
 
 ## Create EC2 Instance on Seoul VPC, One in Public, Another one in Private
 
-***OpenSwan EC2 in Public Subnet*** 
+***Launch Public-OpenSwan EC2 in Public Subnet*** 
 
 Security Group - Seoul-OpenSwan
 
@@ -30,7 +30,7 @@ Security Group - Seoul-OpenSwan
 
 Action => Networking => "Change Source/Dest. Check" => Disable
 
-***Test EC2 Instance in Private Subnet*** 
+***Launch Private-EC2 Instance in Private Subnet*** 
 
 **Connect to OpenSwan EC2**
 
