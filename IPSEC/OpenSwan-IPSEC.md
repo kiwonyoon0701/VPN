@@ -6,8 +6,8 @@
 |        |          |             | Public-OpenSwan | 10.0.0.112 | 3.34.214.63 |      |
 |        |          |             | Private-EC2     | 10.0.1.210 |             |      |
 | Tokyo  | Tokyo    | 20.0.0.0/16 |                 |            |             |      |
-|        |          |             | PublicEC2       | 20.0.0.39  |             |      |
-|        |          |             | PrivateEC2      | 20.0.1.166 |             |      |
+|        |          |             | Public-EC2      | 20.0.0.39  |             |      |
+|        |          |             | Private-EC2     | 20.0.1.166 |             |      |
 
 **Using Amazon Linux 1**
 
