@@ -130,6 +130,8 @@ VPC => Site-to-Site VPN Connections
 
 <kbd> ![GitHub Logo](OpenSwan-IPSEC-images/6.png) </kbd>
 
+*IP Address : Seoul OpenSwan EC2 EIP*
+
 <kbd> ![GitHub Logo](OpenSwan-IPSEC-images/7.png) </kbd>
 
 "Create VPN Connection" Click
