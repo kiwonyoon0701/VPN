@@ -188,9 +188,11 @@ IPsec running  - pluto pid: 24635
 pluto pid 24635
 1 tunnels up
 some eroutes exist
+```
 
 <kbd> ![GitHub Logo](OpenSwan-IPSEC-images/11.png) </kbd>
 
+```
 [ec2-user@ip-10-0-0-112 ~]$ sudo chkconfig ipsec on
 ```
 
