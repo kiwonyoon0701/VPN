@@ -106,10 +106,6 @@ conn tunnel_tokyo
 
 ***Launch Private-EC2 Instance in Private Subnet*** 
 
-*One EC2 instance in Public Subnet*
-
-*One EC2 instance in Private Subnet*
-
 
 ## Create VPG(Virtual Private Gateway)
 
@@ -146,7 +142,7 @@ Click "Download Configuration" in VPC Connection page
 
 <kbd> ![GitHub Logo](OpenSwan-IPSEC-images/10.png) </kbd>
 
-## Connect to OpenSwan EC2 in seoul to make VPN connection
+## Connect to OpenSwan EC2 in seoul to establish IPSEC VPN 
 
 ```
 kiwony@kiwonymac.com:/Users/kiwony/Documents/GitHub/VPN/IPSEC> grep -i 'virtual private gateway' vpn-0e69d9ffe151c77f1.txt
