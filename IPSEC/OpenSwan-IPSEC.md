@@ -193,7 +193,7 @@ some eroutes exist
 [ec2-user@ip-10-0-0-112 ~]$ sudo chkconfig ipsec on
 ```
 
-*Tunnel 1 is UP Status*
+**Tunnel 1 is UP Status**
 
 <kbd> ![GitHub Logo](OpenSwan-IPSEC-images/11.png) </kbd>
 
