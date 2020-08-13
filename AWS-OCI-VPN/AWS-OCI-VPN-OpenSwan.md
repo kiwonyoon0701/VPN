@@ -62,7 +62,7 @@ conn tunnel_oci_aws
 #Openswan_EIP Remote_Tunnel-IP: PSK "Pre-Shared Key"
 ```
 
-**Create Virtual Private Gateway**
+## Create Virtual Private Gateway
 
 <kbd> ![GitHub Logo](AWS-OCI-VPN-OpenSwan-images/1.png) </kbd>
 
