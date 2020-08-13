@@ -70,11 +70,13 @@ conn tunnel_oci_aws
 
 <kbd> ![GitHub Logo](AWS-OCI-VPN-OpenSwan-images/3.png) </kbd>
 
-*OCI OpenSwan EIP Check 132.145.95.50*
+*OCI OpenSwan EIP Check : 132.145.95.50*
 
 <kbd> ![GitHub Logo](AWS-OCI-VPN-OpenSwan-images/4.png) </kbd>
 
-*Create VPN Connection*
+*Create VPN Connection *  
+*IP Address : Seoul OpenSwan EC2 EIP*  
+*Static Routing : 10.0.0.0/16
 
 <kbd> ![GitHub Logo](AWS-OCI-VPN-OpenSwan-images/5.png) </kbd>
 
