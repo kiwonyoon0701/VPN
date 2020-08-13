@@ -101,12 +101,15 @@ conn tunnel_tokyo
 
 **Create EC2 instances in Tokyo VPC**
 
-One EC2 instance in Public Subnet
-One EC2 instance in Private Subnet
+*One EC2 instance in Public Subnet*
+
+*One EC2 instance in Private Subnet*
 
 
-**Create VPG(Virtual Private Gateway)**
+## Create VPG(Virtual Private Gateway)
+
 VPC => Virtual Private Gateways => "Create Virtual Private Gateway" Click
+
 Name Tag : ToTokyo
 
 <kbd> ![GitHub Logo](OpenSwan-IPSEC-images/3.png) </kbd>
