@@ -130,7 +130,8 @@ VPC => Site-to-Site VPN Connections
 
 <kbd> ![GitHub Logo](OpenSwan-IPSEC-images/6.png) </kbd>
 
-*IP Address : Seoul OpenSwan EC2 EIP*
+*IP Address : Seoul OpenSwan EC2 EIP*  
+*Static Routing : 10.0.0.0/16*
 
 <kbd> ![GitHub Logo](OpenSwan-IPSEC-images/7.png) </kbd>
 
