@@ -87,7 +87,18 @@ kiwony@kiwonymac.com:/Users/kiwony/Documents/GitHub/easy-rsa/easyrsa3/acm> awsaw
 
 
 
-**Create VPC and attach DHCP Option Set**
+**Create VPC**
+
+| Resource       | Name             | CIDR                     | DESC                                          |
+| ------------- | --------------------- | ---------------------------- | --------------------------------------------- |
+| VPC    | ASWDC           | VPC                          | OnPREM VPC(10.100.0.0/16)                     |
+|               |                       | Subnet                       | 2 Public, 2 Private Subnet                    |
+|               |                       | EC2                          | Oracle-11gR2, Tomcat8, Windows2019            |
+|               |                       | Profile                      | SSMProfile for EC2 instances                  |
+|               |                       | Oracle Info                  | PublicSubnet1, 10.100.1.101                   |
+|               |                       | Tomcat Info                  | PublicSubnet1, 10.100.1.102                   |
+|               |                       | Window Info                  | PublicSubnet1, 10.100.1.103                   |
+| ============= | ===================== | ============================ | ============================================= |
 
 <kbd> ![GitHub Logo](images/2.png) </kbd>
 
