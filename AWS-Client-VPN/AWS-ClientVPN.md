@@ -85,51 +85,75 @@ kiwony@kiwonymac.com:/Users/kiwony/Documents/GitHub/easy-rsa/easyrsa3/acm> awsaw
 
 <kbd> ![GitHub Logo](images/1.png) </kbd>
 
-
-
 **Create VPC**
 
-| Resource       | Name             | CIDR                     | DESC                                          |
+| Resource      | Name                  | CIDR                         | DESC                                          |
 | ------------- | --------------------- | ---------------------------- | --------------------------------------------- |
-| VPC    | ASWDC           | VPC                          | OnPREM VPC(10.100.0.0/16)                     |
-|               |                       | Subnet                       | 2 Public, 2 Private Subnet                    |
-|               |                       | EC2                          | Oracle-11gR2, Tomcat8, Windows2019            |
-|               |                       | Profile                      | SSMProfile for EC2 instances                  |
-|               |                       | Oracle Info                  | PublicSubnet1, 10.100.1.101                   |
-|               |                       | Tomcat Info                  | PublicSubnet1, 10.100.1.102                   |
-|               |                       | Window Info                  | PublicSubnet1, 10.100.1.103                   |
+| VPC           | ASWDC                 | 10.10.0.0/16                 | .                                             |
+| Subnet-Pub01  | AWSDC-PUB01           | 10.10.1.0/16                 | .                                             |
+| Subnet-Pub02  | AWSDC-PUB02           | 10.10.2.0/16                 | .                                             |
+| Subnet-Prv01  | AWSDC-PRV01           | 10.10.101.0/16               | .                                             |
+| Subnet-Priv02 | AWSDC-PRV01           | 10.10.102.0/16               | .                                             |
+|               |                       | Tomcat Info                  | .                                             |
+|               |                       | Window Info                  | .                                             |
 | ============= | ===================== | ============================ | ============================================= |
 
 <kbd> ![GitHub Logo](images/2.png) </kbd>
 
 <kbd> ![GitHub Logo](images/3.png) </kbd>
 
+**Create Public/Private Subnet02**
+
+<kbd> ![GitHub Logo](images/4.png) </kbd>
+
+<kbd> ![GitHub Logo](images/5.png) </kbd>
+
+**Create Directory**
+
+```
+Setup Directory
+```
+
+<kbd> ![GitHub Logo](images/6.png) </kbd>
+<kbd> ![GitHub Logo](images/7.png) </kbd>
+<kbd> ![GitHub Logo](images/8.png) </kbd>
+<kbd> ![GitHub Logo](images/9.png) </kbd>
+<kbd> ![GitHub Logo](images/10.png) </kbd>
+<kbd> ![GitHub Logo](images/11.png) </kbd>
+
+EC2 Create
+
+User Create
 
 **Create VPC and attach DHCP Option Set**
+
+```
+
+```
+
+**Create VPC and attach DHCP Option Set**
+
 ```
 
 <kbd> ![GitHub Logo](images/1.png) </kbd>
 ```
-**Create VPC and attach DHCP Option Set**
-```
 
-```
 **Create VPC and attach DHCP Option Set**
+
 ```
 
 <kbd> ![GitHub Logo](images/1.png) </kbd>
 ```
+
 **Create VPC and attach DHCP Option Set**
+
 ```
 
 <kbd> ![GitHub Logo](images/1.png) </kbd>
 ```
-**Create VPC and attach DHCP Option Set**
-```
 
-<kbd> ![GitHub Logo](images/1.png) </kbd>
-```
 **Create VPC and attach DHCP Option Set**
+
 ```
 
 <kbd> ![GitHub Logo](images/1.png) </kbd>
