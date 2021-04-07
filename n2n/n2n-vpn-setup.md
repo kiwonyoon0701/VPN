@@ -1,4 +1,4 @@
-server private-ip vpn-ip
+### server private-ip vpn-ip
 
 | Node type  | Private IP   | VPN IP        | etc |
 | ---------- | ------------ | ------------- | --- |
