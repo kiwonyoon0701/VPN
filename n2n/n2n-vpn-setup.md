@@ -1,11 +1,11 @@
 ### server private-ip vpn-ip
 
-| Node type  | Private IP   | VPN IP        | etc |
-| ---------- | ------------ | ------------- | --- |
-| VPN Server | 172.31.1.10  | 0             |     |
-| client1    | 172.31.1.101 | 192.168.1.101 |     |
-| xlarge     | 172.31.1.102 | 192.168.1.102 |     |
-| xlarge     | 172.31.1.103 | 192.168.1.103 |     |
+| Node type  | Private IP   | VPN IP      | etc |
+| ---------- | ------------ | ----------- | --- |
+| VPN Server | 172.31.1.10  | 0           |     |
+| client1    | 172.31.1.101 | 192.168.1.2 |     |
+| xlarge     | 172.31.1.102 | 192.168.1.3 |     |
+| xlarge     | 172.31.1.103 | 192.168.1.4 |     |
 
 ### n2n software install on server/client
 
@@ -149,4 +149,16 @@ ubuntu@ip-172-31-1-102:/home/ubuntu> cat ./3gfile |pv |nc 192.168.1.2 5001
 ubuntu@ip-172-31-1-102:/home/ubuntu> cat ./3gfile |pv |nc 192.168.1.2 5001
 2.93GiB 0:01:29 [33.4MiB/s] [                                       <=>
 
+```
+
+**Establishing VPN connection through public IP**
+
+```
+ubuntu@ip-172-31-1-10:/home/ubuntu> sudo supernode -l 12000
+ubuntu@ip-172-31-1-101:/home/ubuntu> sudo edge -c mynetwork -k mysecpass -a 192.168.1.2 -f -l 54.180.134.213:12000
+
+ubuntu@ip-172-31-1-102:/home/ubuntu> sudo edge -c mynetwork -k mysecpass -a 192.168.1.3 -f -l 54.180.134.213:12000
+
+08/Apr/2021 08:38:44 [supernode.c: 476] Supernode ready: listening on port 12000 [TCP/UDP]
+08/Apr/2021 08:39:17 [supernode.c: 119] Registered new node [public_ip=(2)3.35.176.87:49473][private_ip=0.0.0.0:49473][mac=66:15:4A:2C:9C:F5][community=mynetwork]
 ```
