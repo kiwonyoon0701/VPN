@@ -162,3 +162,15 @@ ubuntu@ip-172-31-1-102:/home/ubuntu> sudo edge -c mynetwork -k mysecpass -a 192.
 08/Apr/2021 08:38:44 [supernode.c: 476] Supernode ready: listening on port 12000 [TCP/UDP]
 08/Apr/2021 08:39:17 [supernode.c: 119] Registered new node [public_ip=(2)3.35.176.87:49473][private_ip=0.0.0.0:49473][mac=66:15:4A:2C:9C:F5][community=mynetwork]
 ```
+
+**Route table**
+
+```
+ubuntu@ip-172-31-1-101:/home/ubuntu> route -n
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         172.31.0.1      0.0.0.0         UG    100    0        0 ens5
+172.31.0.0      0.0.0.0         255.255.240.0   U     0      0        0 ens5
+172.31.0.1      0.0.0.0         255.255.255.255 UH    100    0        0 ens5
+192.168.1.0     0.0.0.0         255.255.255.0   U     0      0        0 edge0
+```
