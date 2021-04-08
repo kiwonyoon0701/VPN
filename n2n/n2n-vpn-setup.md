@@ -1,11 +1,11 @@
 ### server private-ip vpn-ip
 
-| Node type  | Private IP   | VPN IP      | etc |
-| ---------- | ------------ | ----------- | --- |
-| VPN Server | 172.31.1.10  | 0           |     |
-| client1    | 172.31.1.101 | 192.168.1.2 |     |
-| xlarge     | 172.31.1.102 | 192.168.1.3 |     |
-| xlarge     | 172.31.1.103 | 192.168.1.4 |     |
+| Node type  | Private IP   | VPN IP        | etc |
+| ---------- | ------------ | ------------- | --- |
+| VPN Server | 172.31.1.10  | 0             |     |
+| client1    | 172.31.1.101 | 192.168.1.101 |     |
+| xlarge     | 172.31.1.102 | 192.168.1.102 |     |
+| xlarge     | 172.31.1.103 | 192.168.1.103 |     |
 
 ### n2n software install on server/client
 
@@ -33,8 +33,8 @@ udp        0      0 0.0.0.0:12000           0.0.0.0:*
 ### Connect VPN from Client1
 
 ```
-ubuntu@ip-172-31-1-101:/home/ubuntu> sudo edge -c mynetwork -k mysecpass -a 192.168.1.2 -f -l 172.31.1.10:12000
-192.168.1.2
+ubuntu@ip-172-31-1-101:/home/ubuntu> sudo edge -c mynetwork -k mysecpass -a 192.168.1.101 -f -l 172.31.1.10:12000
+192.168.1.101
 08/Apr/2021 00:49:29 [     edge.c:1136] Using supernode 172.31.1.10:12000
 08/Apr/2021 00:49:29 [tuntap_linux.c:  38] Interface edge0 has MAC 7A:E3:61:69:C0:B0
 
@@ -53,7 +53,7 @@ ubuntu@ip-172-31-1-101:/home/ubuntu> ip a s
        valid_lft forever preferred_lft forever
 3: edge0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1400 qdisc fq_codel state UNKNOWN group default qlen 1000
     link/ether 7a:e3:61:69:c0:b0 brd ff:ff:ff:ff:ff:ff
-    inet 192.168.1.2/24 brd 192.168.1.255 scope global edge0
+    inet 192.168.1.101/24 brd 192.168.1.10155 scope global edge0
        valid_lft forever preferred_lft forever
     inet6 fe80::78e3:61ff:fe69:c0b0/64 scope link
        valid_lft forever preferred_lft forever
@@ -63,37 +63,37 @@ ubuntu@ip-172-31-1-101:/home/ubuntu> ip a s
 ### Connect VPN from Client2
 
 ```
-ubuntu@ip-172-31-1-102:/home/ubuntu> sudo edge -c mynetwork -k mysecpass -a 192.168.1.3 -f -l 172.31.1.10:12000
-192.168.1.3
+ubuntu@ip-172-31-1-102:/home/ubuntu> sudo edge -c mynetwork -k mysecpass -a 192.168.1.102 -f -l 172.31.1.10:12000
+192.168.1.102
 08/Apr/2021 00:53:15 [     edge.c:1136] Using supernode 172.31.1.10:12000
 08/Apr/2021 00:53:15 [tuntap_linux.c:  38] Interface edge0 has MAC 3A:4C:D3:2A:0B:64
 
-ubuntu@ip-172-31-1-102:/home/ubuntu> ping -c 1 192.168.1.2
-PING 192.168.1.2 (192.168.1.2) 56(84) bytes of data.
-64 bytes from 192.168.1.2: icmp_seq=1 ttl=64 time=1.27 ms
+ubuntu@ip-172-31-1-102:/home/ubuntu> ping -c 1 192.168.1.101
+PING 192.168.1.101 (192.168.1.101) 56(84) bytes of data.
+64 bytes from 192.168.1.101: icmp_seq=1 ttl=64 time=1.27 ms
 
---- 192.168.1.2 ping statistics ---
+--- 192.168.1.101 ping statistics ---
 1 packets transmitted, 1 received, 0% packet loss, time 0ms
 rtt min/avg/max/mdev = 1.273/1.273/1.273/0.000 ms
 
-ubuntu@ip-172-31-1-102:/home/ubuntu> traceroute 192.168.1.2
-traceroute to 192.168.1.2 (192.168.1.2), 30 hops max, 60 byte packets
- 1  ip-192-168-1-2.ap-northeast-2.compute.internal (192.168.1.2)  0.594 ms  0.586 ms  0.582 ms
+ubuntu@ip-172-31-1-102:/home/ubuntu> traceroute 192.168.1.101
+traceroute to 192.168.1.101 (192.168.1.101), 30 hops max, 60 byte packets
+ 1  ip-192.168.1.101.ap-northeast-2.compute.internal (192.168.1.101)  0.594 ms  0.586 ms  0.582 ms
 ```
 
 ### Connect VPN from Client3
 
 ```
-ubuntu@ip-172-31-1-103:/home/ubuntu> sudo edge -c mynetwork -k mysecpass -a 192.168.1.4 -f -l 172.31.1.10:12000
-192.168.1.4
+ubuntu@ip-172-31-1-103:/home/ubuntu> sudo edge -c mynetwork -k mysecpass -a 192.168.1.103 -f -l 172.31.1.10:12000
+192.168.1.103
 08/Apr/2021 00:54:17 [     edge.c:1136] Using supernode 172.31.1.10:12000
 08/Apr/2021 00:54:17 [tuntap_linux.c:  38] Interface edge0 has MAC 8E:54:21:6C:B2:2
 
-ubuntu@ip-172-31-1-103:/home/ubuntu> ping -c 1 192.168.1.2
-PING 192.168.1.2 (192.168.1.2) 56(84) bytes of data.
-64 bytes from 192.168.1.2: icmp_seq=1 ttl=64 time=1.28 ms
+ubuntu@ip-172-31-1-103:/home/ubuntu> ping -c 1 192.168.1.101
+PING 192.168.1.101 (192.168.1.101) 56(84) bytes of data.
+64 bytes from 192.168.1.101: icmp_seq=1 ttl=64 time=1.28 ms
 
---- 192.168.1.2 ping statistics ---
+--- 192.168.1.101 ping statistics ---
 1 packets transmitted, 1 received, 0% packet loss, time 0ms
 rtt min/avg/max/mdev = 1.289/1.289/1.289/0.000 ms
 ```
@@ -143,10 +143,10 @@ ubuntu@ip-172-31-1-101:/home/ubuntu> sudo nc -l 5001 > /dev/null
 ```
 ubuntu@ip-172-31-1-102:/home/ubuntu> dd if=/dev/urandom of=./3gfile bs=1024k count=3000
 
-ubuntu@ip-172-31-1-102:/home/ubuntu> cat ./3gfile |pv |nc 192.168.1.2 5001
+ubuntu@ip-172-31-1-102:/home/ubuntu> cat ./3gfile |pv |nc 192.168.1.101 5001
 1.08GiB 0:00:33 [33.5MiB/s] [
 
-ubuntu@ip-172-31-1-102:/home/ubuntu> cat ./3gfile |pv |nc 192.168.1.2 5001
+ubuntu@ip-172-31-1-102:/home/ubuntu> cat ./3gfile |pv |nc 192.168.1.101 5001
 2.93GiB 0:01:29 [33.4MiB/s] [                                       <=>
 
 ```
@@ -155,9 +155,9 @@ ubuntu@ip-172-31-1-102:/home/ubuntu> cat ./3gfile |pv |nc 192.168.1.2 5001
 
 ```
 ubuntu@ip-172-31-1-10:/home/ubuntu> sudo supernode -l 12000
-ubuntu@ip-172-31-1-101:/home/ubuntu> sudo edge -c mynetwork -k mysecpass -a 192.168.1.2 -f -l 54.180.134.213:12000
+ubuntu@ip-172-31-1-101:/home/ubuntu> sudo edge -c mynetwork -k mysecpass -a 192.168.1.101 -f -l 54.180.134.213:12000
 
-ubuntu@ip-172-31-1-102:/home/ubuntu> sudo edge -c mynetwork -k mysecpass -a 192.168.1.3 -f -l 54.180.134.213:12000
+ubuntu@ip-172-31-1-102:/home/ubuntu> sudo edge -c mynetwork -k mysecpass -a 192.168.1.102 -f -l 54.180.134.213:12000
 
 08/Apr/2021 08:38:44 [supernode.c: 476] Supernode ready: listening on port 12000 [TCP/UDP]
 08/Apr/2021 08:39:17 [supernode.c: 119] Registered new node [public_ip=(2)3.35.176.87:49473][private_ip=0.0.0.0:49473][mac=66:15:4A:2C:9C:F5][community=mynetwork]
