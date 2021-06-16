@@ -169,7 +169,7 @@ key C:\\vpn-config\\user01.kiwony.com.key
 
 <kbd> ![GitHub Logo](images/19.png) </kbd>
 
-**Default gateway is still using lan gw, client can not access to internet**
+**Default gateway is still using lan gw, client can not access to internet, and can access to default VPC-EC2**
 
 <kbd> ![GitHub Logo](images/20.png) </kbd>
 
