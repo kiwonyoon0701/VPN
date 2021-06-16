@@ -135,7 +135,9 @@ kiwony@kiwonymac.com:/Users/kiwony/temp/easy-rsa/easyrsa3/acm> aws acm import-ce
 <kbd> ![GitHub Logo](images/6.png) </kbd>
 
 <kbd> ![GitHub Logo](images/7.png) </kbd>
+
 <kbd> ![GitHub Logo](images/8.png) </kbd>
+
 <kbd> ![GitHub Logo](images/9.png) </kbd>
 
 **Modify and add the line**
@@ -147,4 +149,26 @@ key C:\\vpn-config\\user01.kiwony.com.key
 
 ```
 
-<kbd> ![GitHub Logo](images/2.png) </kbd>
+<kbd> ![GitHub Logo](images/10.png) </kbd>
+
+<kbd> ![GitHub Logo](images/11.png) </kbd>
+
+<kbd> ![GitHub Logo](images/12.png) </kbd>
+
+<kbd> ![GitHub Logo](images/13.png) </kbd>
+
+<kbd> ![GitHub Logo](images/14.png) </kbd>
+
+<kbd> ![GitHub Logo](images/15.png) </kbd>
+
+<kbd> ![GitHub Logo](images/16.png) </kbd>
+
+<kbd> ![GitHub Logo](images/17.png) </kbd>
+
+<kbd> ![GitHub Logo](images/18.png) </kbd>
+
+<kbd> ![GitHub Logo](images/19.png) </kbd>
+
+<kbd> ![GitHub Logo](images/20.png) </kbd>
+
+<kbd> ![GitHub Logo](images/21.png) </kbd>
