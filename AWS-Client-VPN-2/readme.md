@@ -169,6 +169,27 @@ key C:\\vpn-config\\user01.kiwony.com.key
 
 <kbd> ![GitHub Logo](images/19.png) </kbd>
 
+**Default gateway is still using lan gw, client can not access to internet**
+
 <kbd> ![GitHub Logo](images/20.png) </kbd>
+
+**Delete current default gw and add new gw for VPN endpoint**
+
+```
+C:\WINDOWS\system32>route delete 0.0.0.0
+ OK!
+
+C:\WINDOWS\system32>route add -p 0.0.0.0 mask 0.0.0.0 20.0.1.1
+ OK!
+
+ C:\WINDOWS\system32>route print|more
+
+IPv4 Route Table
+===========================================================================
+Active Routes:
+Network Destination        Netmask          Gateway       Interface  Metric
+          0.0.0.0          0.0.0.0         20.0.1.1         20.0.1.2      2
+   18.144.131.213  255.255.255.255      192.168.0.1     192.168.0.10     35
+```
 
 <kbd> ![GitHub Logo](images/21.png) </kbd>
