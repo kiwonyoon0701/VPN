@@ -119,3 +119,32 @@ kiwony@kiwonymac.com:/Users/kiwony/temp/easy-rsa/easyrsa3/acm> aws acm import-ce
 ```
 
 <kbd> ![GitHub Logo](images/1.png) </kbd>
+
+### Create VPN Endpoint
+
+<kbd> ![GitHub Logo](images/2.png) </kbd>
+
+<kbd> ![GitHub Logo](images/3.png) </kbd>
+
+<kbd> ![GitHub Logo](images/4.png) </kbd>
+
+<kbd> ![GitHub Logo](images/5.png) </kbd>
+
+**wait 5~10min to associate**
+
+<kbd> ![GitHub Logo](images/6.png) </kbd>
+
+<kbd> ![GitHub Logo](images/7.png) </kbd>
+<kbd> ![GitHub Logo](images/8.png) </kbd>
+<kbd> ![GitHub Logo](images/9.png) </kbd>
+
+**Modify and add the line**
+
+```
+remote user01.cvpn-endpoint-0ac7db2bae8a8125d.prod.clientvpn.us-west-1.amazonaws.com 443
+cert C:\\vpn-config\\user01.kiwony.com.crt
+key C:\\vpn-config\\user01.kiwony.com.key
+
+```
+
+<kbd> ![GitHub Logo](images/2.png) </kbd>
